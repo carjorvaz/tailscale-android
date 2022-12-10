@@ -157,7 +157,9 @@ func newBackend(dataDir string, jvm *jni.JVM, appCtx jni.Object, store *stateSto
 
 func (b *backend) Start(notify func(n ipn.Notify)) error {
 	b.backend.SetNotifyCallback(notify)
-	return b.backend.Start(ipn.Options{})
+	prefs := ipn.NewPrefs()
+	prefs.ControlURL = "https://headscale.vaz.one"
+	return b.backend.Start(ipn.Options{UpdatePrefs: prefs})
 }
 
 func (b *backend) LinkChange() {
