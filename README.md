@@ -5,6 +5,8 @@ Needed because I wasn't able to select an external server on GrapheneOS.
 When I tapped the button "Save and restart", the app crashed and kept redirecting me to tailscale's login page.
 [Likely a GrapheneOS-specific issue.](https://forum.tailscale.com/t/tailscale-with-headscale-with-graphene-os/3312)
 
+[Relevant commit where I set my external server as the default server.](https://github.com/carjorvaz/tailscale-android/commit/1846cc4da3896cf914c752372166948ede4a3d7e)
+
 ## Installation steps:
 -  [Sync fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork)
 
